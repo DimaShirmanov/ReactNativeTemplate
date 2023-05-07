@@ -12,8 +12,8 @@
 - Taliwindcss
 - Linter
 
-
 ## Структура проекта
+
 Проект использует архитекутуру [Feature Sliced Design](https://feature-sliced.design)
 
 ```sh
@@ -32,13 +32,25 @@
         ├── lib # Вспомогательные библиотеки
         ├── assets # Медиа файлы (картинки, иконки)
         └── config # Различные статические данные
-    └── fastlane # Автоматизация сборок IOS/Android приложений
+└── fastlane # Автоматизация сборок IOS/Android приложений
+```
+
+## fastlane
+
+```sh
+└── fastlane/
+    ├── .env # Ключи для сборок
+    ├── Appfile
+    ├── Fastfile # Файл с логикой сборок
+    ├── Pluginfile # Плагины
+    └── Readme.md
 ```
 
 ## navigation
+
 ```sh
 └── navigation
-    ├── navigators/ 
+    ├── navigators/
         ├── {StackName/} # Навигационный стек с экранами
         └── index.ts # Общий экспорт стеков
     ├── options/ # Конфигурации навигаций
@@ -46,6 +58,7 @@
 ```
 
 ## providers
+
 ```sh
 └── providers
     ├── with{NameProvider}.tsx # Файл провайдера
@@ -53,6 +66,7 @@
 ```
 
 ## entities
+
 ```sh
 └── entities
     ├── {entityName/} # Сущность
@@ -65,20 +79,32 @@
         └── index.ts # Точка входа сущности
 ```
 
-
 ## shared
 
 ```sh
 └── shared
     ├── config
-        ├── {name}.ts # Статичская сущность 
-        └── index.ts # Общий импорт 
+        ├── {name}.ts # Статичская сущность
+        └── index.ts # Общий импорт
     └── ui # Переиспользуемые UI компорненты
         ├── {component/} # Папка компонента
             ├── Component.tsx # Компонент
             ├── Componen.spec.tsx # Unit тест
             └── index.ts # Точка входа компонента
-        └── index.ts # Общий импорт 
+        └── index.ts # Общий импорт
+```
+
+```sh
+└── shared
+    ├── config
+        ├── {name}.ts # Статичская сущность
+        └── index.ts # Общий импорт
+    └── ui # Переиспользуемые UI компорненты
+        ├── {component/} # Папка компонента
+            ├── Component.tsx # Компонент
+            ├── Componen.spec.tsx # Unit тест
+            └── index.ts # Точка входа компонента
+        └── index.ts # Общий импорт
 ```
 
 ## Используемые библиотеки
@@ -86,11 +112,10 @@
 - [Effector](https://effector.dev)
 - [NativeWind](https://www.nativewind.dev/)
 
-
 ## Как запустить проект
 
 - IOS
-    - cd iod && pod install
-    - npm run ios
+  - cd iod && pod install
+  - npm run ios
 - Android
-    - npm run android
+  - npm run android
