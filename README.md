@@ -8,6 +8,8 @@
 - React Navigation
 - Различные хуки
 - Fastlane
+- Firebase
+- Taliwindcss
 
 
 На данный момент шаблон находится в разработке, как закончю выкладывать TypeScript выложу шаблон.
