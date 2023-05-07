@@ -5,6 +5,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const Container = ({children}: Props) => (
+export const Container: React.FC<Props> = ({children}) => (
   <SafeAreaView className="flex-1">{children}</SafeAreaView>
 );
