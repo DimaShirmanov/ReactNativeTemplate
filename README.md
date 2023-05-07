@@ -10,3 +10,4 @@
 - Fastlane
 - Firebase
 - Taliwindcss
+- Linter
