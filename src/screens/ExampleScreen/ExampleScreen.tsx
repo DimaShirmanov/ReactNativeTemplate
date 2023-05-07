@@ -1,11 +1,27 @@
 import * as React from 'react';
-import {Text, View} from 'react-native';
+import {reflect} from '@effector/reflect';
 import * as UI from 'shared/ui';
+import * as counterModel from 'entities/counter';
+import {View} from 'react-native';
 
-export const ExampleScreen = () => (
+interface Props {
+  counter: number;
+  counterUpdate: () => void;
+}
+
+export const ExampleView: React.FC<Props> = ({counter, counterUpdate}) => (
   <UI.Container>
-    <View className="bg-neutral-300 dark:bg-slate-900 flex-1 items-center justify-center">
-      <Text className="font-bold">I'm example secreen</Text>
+    <View className="flex-1 justify-center items-center">
+      <UI.Typography>Counter: {counter}</UI.Typography>
+      <UI.Button onPress={counterUpdate} title="Update" />
     </View>
   </UI.Container>
 );
+
+export const ExampleScreen = reflect({
+  view: ExampleView,
+  bind: {
+    counter: counterModel.$counter,
+    counterUpdate: counterModel.counterUpdate,
+  },
+});

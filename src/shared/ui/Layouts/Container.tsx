@@ -6,5 +6,5 @@ interface Props {
 }
 
 export const Container: React.FC<Props> = ({children}) => (
-  <SafeAreaView className="flex-1">{children}</SafeAreaView>
+  <SafeAreaView className="flex-1 bg-white">{children}</SafeAreaView>
 );

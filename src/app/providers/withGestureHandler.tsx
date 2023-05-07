@@ -1,15 +1,8 @@
 import React from 'react';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {StyleSheet} from 'react-native';
 
 export const withGestureHandler = (Component: React.ReactNode) => (
-  <GestureHandlerRootView style={styles.container}>
+  <GestureHandlerRootView className="flex-1">
     {Component}
   </GestureHandlerRootView>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
