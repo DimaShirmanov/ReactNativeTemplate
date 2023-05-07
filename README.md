@@ -14,8 +14,6 @@
 
 ## Структура проекта
 
-Проект использует архитекутуру [Feature Sliced Design](https://feature-sliced.design)
-
 ```sh
 └── src/
     ├── @types # Общие типы для переиспользования
@@ -107,10 +105,11 @@
         └── index.ts # Общий импорт
 ```
 
-## Используемые библиотеки
+## Дополнитльно
 
-- [Effector](https://effector.dev)
-- [NativeWind](https://www.nativewind.dev/)
+- Проект использует [Feature Sliced Design](https://feature-sliced.design) архитектуру
+- Как хранилище выбран [Effector](https://effector.dev)
+- Вместо привычных стилей через StyleSheet используется [NativeWind](https://www.nativewind.dev/)
 
 ## Как запустить проект
 
